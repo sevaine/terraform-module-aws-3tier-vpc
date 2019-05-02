@@ -1,0 +1,10 @@
+output "vpc_id" { value = "${aws_vpc.vpc.id}" }
+output "public_subnets" { value = "${aws_subnet.public_subnet.*.id}" }
+output "private_subnets" { value = "${aws_subnet.private_subnet.*.id}" }
+output "data_subnets" { value = "${aws_subnet.data_subnet.*.id}" }
+output "public_route_table_id" { value = "${aws_route_table.public.id}" }
+output "private_route_table_id" { value = "${aws_route_table.private.id}" }
+output "data_route_table_id" { value = "${aws_route_table.data.id}" }
+output "public_nacl_id" { value = "${aws_network_acl.public.id}" }
+output "private_nacl_id" { value = "${aws_network_acl.private.id}" }
+output "data_nacl_id" { value = "${aws_network_acl.data.id}" }
